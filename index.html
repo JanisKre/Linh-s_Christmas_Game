@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Linh's Christmas — Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --scale: 5;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-frame">
+    <main class="game-main">
+      <div class="game-bezel">
+        <canvas id="game" width="160" height="90" tabindex="0"></canvas>
+        <div id="quiz-overlay" class="quiz-overlay" style="display: none;">
+          <div class="quiz-card">
+            <h2 id="quiz-title"></h2>
+            <p id="quiz-question"></p>
+            <div id="quiz-options" class="quiz-options"></div>
+            <div id="quiz-message" class="quiz-message"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- CORRECT ORDER: init first, then all modules -->
+  <script src="ui.js"></script>
+  <script src="init.js"></script>
+  <script src="camera.js"></script>
+  <script src="input.js"></script>
+  <script src="world.js"></script>
+  <script src="events.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
